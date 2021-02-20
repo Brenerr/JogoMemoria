@@ -6,24 +6,18 @@
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.main {
-  height: 100%;
-  width: 61%;
   align-items: center;
-  justify-content: center;
 }
 
 .menu {
-  width: 100%;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 10px 0;
+  align-items: center;
+  width: 928px;
 }
 
 .info {
@@ -31,15 +25,11 @@ body {
   width: 100%;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 10px;
 }
 
 .container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: auto;
+  height: auto;
 }
 
 .card {
@@ -60,7 +50,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: 1s ease-in-out;
-  transform: perspective(500px) rotateY( 0deg);
+  transform: perspective(500px) rotateY(0deg);
 }
 
 .card .face.back {
@@ -69,15 +59,15 @@ body {
 
 label {
   font-weight: 800;
-  font-size: 16px;
+  font-size: 14px;
   color: #783F8E;
 }
 
 button {
 	background-color:#783F8E;
-  border: none;
-  border-radius: 10px;
-  color:#ffffff;
+  outline: none;
+  border-radius: 14px;
+  color:#f1faee;
 	font-size: 16px;
 	font-weight: bold;
   height: 40px;

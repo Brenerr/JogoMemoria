@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Memória</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
-    
-    <div class="main"> 
-        
-        <div class="menu">
-            <div class="info">
-                <div class="hits">
-                    <label for="hits" >ACERTOS:</label>
-                    <input id="hits" type="number" readonly  value="0" />
-                </div>
-                
-                <div class="errors">
-                    <label for="errors" >ERROS:</label>
-                    <input id="errors" type="number" readonly  value="0" />
-                </div>
+    <div class="menu">
+        <div class="info">
+            <div class="hits">
+                <label for="hits">ACERTOS:</label>
+                <input type="number" readonly id="hits" value="0" />
             </div>
-            <button class="button" onclick=reroll()>Embaralhar</button>
+
+            <div class="errors">
+                <label for="errors">ERROS:</label>
+                <input type="number" readonly id="errors" value="0" />
+            </div>
         </div>
-            
-        <div id="container" class="container"></div>
+        <button class="button" onclick=reroll()>Embaralhar</button>
     </div>
+
+    <div id="container" class="container"></div>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>

@@ -3,7 +3,7 @@ var secondClick = null;
 var correctPars = [];
 var waitingTime = 0;
 
-const reroll= () => {
+function reroll() {
 
     firstClick = null;
     secondClick = null;
@@ -30,10 +30,10 @@ const reroll= () => {
         <td>
             <div class="card">
                 <div id="front${randomNumbers[i]}" class="face front" onclick=turnCardUp(${randomNumbers[i]})>
-                    <img width=150 src="imagens/frente.jpg">
+                    <img width=150px src="imagens/frente.jpg">
                 </div>
                 <div id="back${randomNumbers[i]}" class="face back" onclick=turnCardUp(${randomNumbers[i]})>
-                    <img id="img${randomNumbers[i]}" width=150 src="imagens/${randomNumbers[i]}.jpg">
+                    <img id="img${randomNumbers[i]}" width=150px src="imagens/${randomNumbers[i]}.jpg">
                 </div>
             </div>
         </td>`
@@ -42,10 +42,10 @@ const reroll= () => {
         <td>
             <div class="card">
                 <div id="front${randomNumbers[i]}" class="face front" onclick=turnCardUp(${randomNumbers[i]})>
-                    <img width=150 src="imagens/frente.jpg">
+                    <img width=150px src="imagens/frente.jpg">
                 </div>
                 <div id="back${randomNumbers[i]}" class="face back" onclick=turnCardUp(${randomNumbers[i]})>
-                    <img id="img${randomNumbers[i]}" width=150 src="imagens/${randomNumbers[i]}.jpg">
+                    <img id="img${randomNumbers[i]}" width=150px src="imagens/${randomNumbers[i]}.jpg">
                 </div>
             </div>
         </td></tr><tr>`
@@ -57,7 +57,7 @@ const reroll= () => {
     document.getElementById('container').innerHTML= table;
 }
 
-const checkPairs = () => {
+function checkPairs() {
 
         if (!(firstClick % 2) && ((firstClick - 1) === secondClick) || 
         (firstClick % 2) && ((firstClick + 1) === secondClick)) {
@@ -93,7 +93,7 @@ const checkPairs = () => {
         }
 }
 
-const turnCardUp = (id) => {
+function turnCardUp(id) {
 
     if(!correctPars.includes(id) && id != firstClick && waitingTime === 0){
 
@@ -128,7 +128,7 @@ const turnCardUp = (id) => {
     }
 }
 
-const turnCardDown = () => {
+function turnCardDown() {
 
     const front = document.getElementById(`front${firstClick}`);
     const back = document.getElementById(`back${firstClick}`);
